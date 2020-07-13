@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="refresh" content="1"/>
+	<title>Assignment 3- Display date in different formats</title>
+</head>
+<body>
+	<h1>Today's date</h1>
+	<div>Today's date in dd/mm/yyyy is:
+		<span><script type="text/javascript">
+			var today= new Date();
+			dd=today.getDate();
+			if (dd<10) {
+				dd='0'+dd;}
+			mm=today.getMonth()+1;
+			if (mm<10) {
+				mm='0'+mm;}
+			document.write(dd+'/'+mm+'/'+today.getFullYear());
+		</script></span>
+	</div>
+	<div id="time">Today's date in mm/dd/yyyy is:
+		<span><script type="text/javascript">
+			var today= new Date();
+			dd=today.getDate();
+			if (dd<10) {
+				dd="0"+dd;}
+			mm=today.getMonth()+1;
+			if (mm<10) {
+				mm="0"+mm;}
+			document.write(mm+'/'+dd+'/'+today.getFullYear());
+		</script></span>
+	</div>
+</body>
+</html>
