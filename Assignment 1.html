@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="refresh" content="1"/>
+	<title>Assignment 1- Display day and current time</title>
+</head>
+<body>
+	<h1>Today's day and time</h1>
+	<div>Today's day is:
+		<span><script type="text/javascript">
+			var today= new Date();
+			var weekday = new Array(7);
+			weekday[0] = "Sunday";
+			weekday[1] = "Monday";
+			weekday[2] = "Tuesday";
+			weekday[3] = "Wednesday";
+			weekday[4] = "Thursday";
+			weekday[5] = "Friday";
+			weekday[6] = "Saturday";
+
+			var n = weekday[today.getDay()];
+			document.write(n);
+		</script></span>
+	</div>
+	<div id="time">Current time is:
+		<span><script type="text/javascript">
+			var today= new Date();
+			document.write(today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds());
+		</script></span>
+	</div>
+</body>
+</html>
