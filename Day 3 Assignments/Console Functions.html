@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="refresh" content="5"/>
+	<title>Assignment 1- Different Functions</title>
+	<!-- CSS only -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	
+</head>
+<body>
+	<h1>Different Functions</h1>
+	<div>Step 1. Kindly open console.
+	<div class="container-fluid">
+  		<div class="row bg-light">
+  			<div class="col border">
+    		  log()- Outputs a log to the console<br>
+    		  <button class="mt-auto btn-success" onclick="console.log('Hello you are logged')">Click to get logged</button>
+    		</div>
+    		<div class="col border">
+    		  Alert()- Outputs an Alert box to the page<br>
+    		  <button class="mt-auto btn-success btn-info" onclick="alert('Hello you are alerted')">Click to get alerted</button>
+    		</div>
+    		<div class="col border">
+			  error()- Outputs an error box to the console<br>
+    		  <button class="mt-auto btn-danger" onclick="errormsg()">Click to get error</button>
+    		  <script type="text/javascript">
+    		  	function errormsg(){	
+    		  		console.error('Hello there is an error');
+    		  		};
+    		  </script>
+    		 </div>
+    		  <div class="col border">
+    		  time()- Starts a timer<br>
+    		  timeEnd()- Ends the timer<br>
+    		  <button class="mt-auto btn-primary" onclick="starttimer()">Click to see how fast console logs this time</button>
+    		  <script type="text/javascript">
+    		  	function starttimer(){
+    		  		console.time();
+    		  		console.log("hello there");
+    		  		console.timeEnd();
+    		  	}
+    		  </script>
+    		</div>
+    		<div class="col border">
+    		  warn()- Outputs a warning message to the console<br>
+    		  <button class="btn btn-danger mt-auto" onclick="warnyou()">Click to get warned</button>
+    		  <script type="text/javascript">
+    		  	function warnyou(){
+    		  		console.warn('Hello you are warned');
+    		  	}
+    		  </script>
+    		</div>
+    		<div class="col border">
+    		  clear()- Clears the console<br>
+    		  <button class="mt-auto btn-info" onclick="console.clear()">Click to clear console when it is not empty</button>
+    		</div>
+    		<div class="col border">
+    		  assert()- Writes an error message to the console if the assertion is false<br>
+    		  <button class="mt-auto btn-secondary" onclick="checkassert()">Click to check if 6<5</button>
+    		  <script type="text/javascript">
+    		  	function checkassert(){
+    		  		console.assert((6<5),'statement provided is false')
+    		  	}
+    		  </script>
+    		</div>
+  		</div>
+	</div>
+	</div>
+	
+	<!-- JS, Popper.js, and jQuery -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>
