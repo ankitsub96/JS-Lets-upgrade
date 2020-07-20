@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="refresh" content="30"/>
+	<title>Assignment 4- Calculator</title>
+	<!-- CSS only -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	
+</head>
+<body>
+	<h1>Calculator</h1>
+	<div class="container-fluid">
+  		<div class="row bg-light">
+  			<div id = "substring" class="col border">
+                <button class="mt-auto btn-success" onclick="add()">Click to Add </button>
+Kindly Input The Numbers To Be Added<br>
+    		</div>
+    		<div class="col border">
+              <button class="mt-auto btn-success btn-info" onclick="subtract()">Click to Subtract</button><br>
+    		  Kindly Input The Numbers To Be Subtracted<br>
+    		</div>
+    		<div class="col border">
+              <button class="mt-auto btn-success" onclick="multiply()">Click to Multiply</button>
+			  Kindly Input The Numbers To Be Multiplied<br>
+			  </div>
+    		<div class="col border">
+              <button class="mt-auto btn-success btn-info" onclick="divide()">Click to Divide</button><br>
+    		  Kindly Input The Numbers To Be Divided<br>
+    		</div>
+    		<div class="col border">
+              <button class="mt-auto btn-success btn-info" onclick="percent()">Click to Calculate Percentage</button><br>
+    		  Kindly Input The Numbers To Be Used<br>
+    		</div>
+    		<div class="col border">
+              <button class="mt-auto btn-success btn-info" onclick="root()">Click to Calculate Square Root</button><br>
+    		  Kindly Input The Number To Find Its Square Root<br>
+    		</div>
+              <script type="text/javascript">
+    		  	function add(){	
+                    var a= window.prompt('Kindly Enter First Number');
+                    a = Number(a);
+                    var b= window.prompt('Kindly Enter Second Number');
+                    b = Number(b);
+                    window.alert("Sum Is   "+ (a+b));}
+                    function subtract(){	
+                    var c= window.prompt('Kindly Enter First Number');
+                    var d= window.prompt('Kindly Enter Second Number');
+                    window.alert("Difference Is   "+((c-d)));}
+                    function multiply(){	
+                    var e= window.prompt('Kindly Enter First Number');
+                    var f= window.prompt('Kindly Enter Second Number');
+                    window.alert("Product Is   "+((e*f)));}
+                    function divide(){	
+                    var g= window.prompt('Kindly Enter First Number');
+                    var h= window.prompt('Kindly Enter Second Number');
+                    window.alert("Quotient Is   "+((g/h)));}
+                    function percent(){	
+                    var i= window.prompt('Kindly Enter First Number');
+                    var j= window.prompt('Kindly Enter Second Number');
+                    window.alert("First Number "+i+" Is  "+(i*100/j)+" percent Of "+ j);}
+                    function root(){	
+                    var k= window.prompt('Kindly Enter First Number');
+                    var l = Math.sqrt(k);
+                    window.alert("Square Root Of The Number Is   "+l);}
+    		  </script>
+    		</div>
+    		</div>
+	
+	<!-- JS, Popper.js, and jQuery -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>
