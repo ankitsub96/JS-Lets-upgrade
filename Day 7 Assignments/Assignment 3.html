@@ -18,30 +18,14 @@
 Kindly Input Positive Numbers To Be Added<br>
     		</div>
               <script type="text/javascript">
-    		  	function start(){	
-                    const obj=[];
-                    const promise1 = new Promise((resolve, reject) => {
-                        resolve('Success!');
-                        reject('Error');
-                        
-                    async function getUsers(){
-                        function random(){
-                        return Math.random()*200;
-                        }   
-                        a=random(); 
-                        fetch('https://jsonplaceholder.typicode.com/todos')
-                        .then(response => response.json())
-                        .then(json => console.log(json));
-                        var result= await getUsers();                                        
-                    }
-                    getUsers();
-                    promise1.then((value) => {
-                     console.log(value);
-                    });
-                    });
-                    };
-                
+    		  	function start(){
                     
+                    const fetchPromise =fetch('https://jsonplaceholder.typicode.com/todos/')
+                    .then(response => response.json())
+                    .then(json => console.log(json));
+                    console.log(fetchPromise);
+                    fetchPromise.then(json => console.log(json));
+                   }
     		  </script>
     		</div>
     		</div>
