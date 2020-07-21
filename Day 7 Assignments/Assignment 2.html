@@ -1,0 +1,88 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="refresh" content="250"/>
+	<title>Assignment 2- Users, Moderators and Admin</title>
+	<!-- CSS only -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	
+</head>
+<body>
+	<h1>Calculator</h1>
+	<div class="container-fluid">
+  		<div class="row bg-light">
+  			<div id = "substring" class="col border">Kindly open the console
+                <button class="mt-auto btn-success" onclick="start()">Click to Start </button>
+Kindly Input Positive Numbers To Be Added<br>
+    		</div>
+              <script type="text/javascript">
+    		  	function start(){	
+                    class User{
+                        constructor(name,age,email){
+                            this.name=name;
+                            this.age=age;
+                            this.email=email;
+                            this.coins=0;
+                            this.courses=[];
+                        }
+                        login(){console.log("person has logged in");}
+                        logout(){console.log("person has logged out");}
+                    }
+                    class Moderator extends User{
+                        addcoins(user){
+                            user.coins++;
+                            console.log("Total numbers of coins of user" +user.name+" is   "+ user.coins);
+                        }
+                        removecoins(user){
+                            user.coins--;
+                            console.log("Total numbers of coins user" +user.name+" is   "+ user.coins);
+                        }
+                    }
+                    class Admin extends Moderator{
+                        addcourses(user,course){
+                            user.courses.push(course);
+                            console.log(user);                        
+                        }
+                        removecourses(user,course){
+                            function remove(arr, value) {
+                            var index = arr.indexOf(value);
+                            if (index > -1) {
+                                arr.splice(index, 1);
+                            }
+                            return arr;
+                            }     
+                            remove(user.courses,course);                   
+                            console.log(user);                        }
+                    }
+                    let user1 = new User('Dilip',25,'dilip@gmail.com')
+                    let user2 = new User('Krishnan',24,'k@gmai.com')
+                    let mod = new Moderator('Berlin',24,'b@gmail.com');
+                    let admin = new Admin('Rio',25,'r@gmail.com');
+                    let users = [user1,user2,mod,admin];
+
+                    users.forEach(element => {
+                    console.log(element);
+                    });
+
+                    mod.addcoins(user1);
+                    mod.addcoins(user1);
+                    mod.removecoins(user1);
+                    admin.addcourses(user1,'Javascript');
+                    admin.addcourses(user1,'Python');
+                    admin.removecourses(user1,'Javascript');
+
+                    };
+                
+                    
+    		  </script>
+    		</div>
+    		</div>
+	
+	<!-- JS, Popper.js, and jQuery -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>
