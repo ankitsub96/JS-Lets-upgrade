@@ -1,0 +1,42 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 1- Background change automatically</title>
+	<!-- CSS only -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	
+</head>
+<body>
+	<h1>Background change automatically</h1>
+	<div class="container-fluid">
+  		<div class="row bg-light">
+  			<div id = "column" class="col border">
+
+              <script type="text/javascript">
+                var bgarr=['#33ccff','#eeccff','#ff99bb','#ffdd99','#bbff99','#b3ffe6','#ccccb3','#ffcc66'];
+                var i;
+                var starttime=new Date();
+                function random(){
+                    i= Math.floor(Math.random()*9);
+                    console.log('Index of bgarr to be used to set background is  '+ i);
+                    document.querySelector('body').style.backgroundColor=bgarr[i]; 
+                    var endtime= new Date();
+                    var time= 'time elapsed till now is   '+Math.round((endtime-starttime)/1000)+'  seconds';
+                    document.querySelector('#column').innerHTML= time; 
+
+                }
+                document.write('Index of bgarr to be used to set background is  '+ i+`\n`);
+                setInterval(random,5000);
+    		  </script>
+            </div>
+    		</div>
+    		</div>
+	
+	<!-- JS, Popper.js, and jQuery -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>

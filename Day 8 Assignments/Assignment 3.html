@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="refresh" content="300"/>
+	<title>Assignment 3- Input, Clock and Dark mode</title>
+	<!-- CSS only -->
+        <link rel="stylesheet" type="text/css" href="Assignment3.css">
+
+</head>
+<body>
+	<h1>Assignment 3- Input, Clock and Dark mode</h1>
+<div>
+            <div id = "column1" class="col border">
+                <button  onclick="start()">Click to get Started</button>
+                <button  onclick="dark()">Click to get Dark mode</button>
+            </div>
+            <div id = "column2" class="col border">
+            </div>
+            <div id = "column3" class="col border">
+            </div>
+
+    		    <script type="text/javascript">
+    		  		var tag =document.querySelector('#column2')
+    		  	function start(){	
+                    var name =window.prompt('Kindly enter your name');
+                    input="Hello "+name+", Welcome to Assignment 3 for today  <br>";
+                    tag.innerHTML=input;
+                    var timeop=document.querySelector("#column3");
+                    var time;
+                    function displaytime(){
+                        time= new Date().toLocaleTimeString();
+                        timeop.innerHTML=" The current time is  " +time;
+                    }
+                    setInterval(displaytime ,1000)
+                    
+                    };
+
+                    function dark(){
+                    attr=document.body;
+                    
+                    attr.classList.toggle("blue");
+
+                    }
+    		  </script>  
+</div>
+<p>
+</p>
+
+	
+	
+	<!-- JS, Popper.js, and jQuery -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>
