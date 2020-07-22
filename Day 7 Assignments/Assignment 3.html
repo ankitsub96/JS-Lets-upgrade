@@ -18,8 +18,10 @@
     		</div>
               <script type="text/javascript">
                 var for1=Math.ceil(Math.random()*10);
+                console.log('Number of entries to be loaded is  '+ for1);
     		  	    async function start(){
                         var id=Math.ceil(Math.random()*200);
+                        console.log('ids to be laoded is  '+ id);
                     let response = await fetch(`https://jsonplaceholder.typicode.com/todos/${id}`);
                     let data = await response.json()
                     return data;
