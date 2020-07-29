@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="refresh" content="300"/>
+	<title>Assignment 1- Todo lists</title>
+
+</head>
+<body>
+	<h1>Assignment 1- Todo lists</h1>
+<div>
+            <form id = "myform" action="">
+                <input type="text" id="todo">
+                <button id="add" onclick="">Click to add Task</button>
+                <button id="remove" onclick="">Click to remove first task</button>
+            </div>
+            <ol id="list"></ol>
+    		    <script type="text/javascript">
+                    document.querySelector("#add").addEventListener("click", function(event){
+                    event.preventDefault();
+
+                    // Getting input and ol by selecting id
+    		  		var listdom =document.querySelector('#list');
+                    console.log(listdom);
+                    var input =document.querySelector('#todo').value;
+                    console.log(input);
+
+                    //Creating element and adding value to it 
+                    let make_li = document.createElement("li");
+                    let textnode= document.createTextNode(input);
+                    console.log(textnode);
+                    make_li.appendChild(textnode);
+                    // Adding li to ul
+                    listdom.appendChild(make_li);
+                    document.forms.myform.reset();
+                    }) ;
+
+                    document.querySelector("#remove").addEventListener("click", function(event){
+                    event.preventDefault();
+                    var listdom =document.querySelector('#list');
+                    console.log(listdom);
+                    list.removeChild(document.getElementsByTagName('li')[0]);
+                    }) ;
+    		  </script>  
+</div>
+<p>
+</p>
+
+	
+	
+	<!-- JS, Popper.js, and jQuery -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>

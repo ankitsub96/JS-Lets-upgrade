@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="refresh" content="300"/>
+	<title>Assignment 3- Random quotes generator</title>
+
+</head>
+<body>
+	<h1>Assignment 3- Random quotes generator</h1>
+<div>
+            <form id = "myform" action="">
+                <button id="quotes" onclick="">Click to show random quotes</button><br>
+                <label>Click again and again to appreciate better</label>
+                <button id="garbage" onclick="">Click to generate random unreadable quotes</button>
+            </div><br><br><br><br>
+            
+            <div id="output"></div>
+    		    <script type="text/javascript">
+                    document.querySelector("#quotes").addEventListener("click", function(event){
+                        event.preventDefault();
+                        var quotesarr=['Love For All, Hatred For None. – Khalifatul Masih III', 'Change the world by being yourself. – Amy Poehler','Every moment is a fresh beginning. – T.S Eliot','Never regret anything that made you smile. – Mark Twain','Die with memories, not dreams. – Unknown','Aspire to inspire before we expire. – Unknown','Everything you can imagine is real. – Pablo Picasso','Simplicity is the ultimate sophistication. – Leonardo da Vinci','Whatever you do, do it well. – Walt Disney','What we think, we become. – Buddha','All limitations are self-imposed. – Oliver Wendell Holmes','Tough times never last but tough people do. – Robert H. Schiuller','Problems are not stop signs, they are guidelines. – Robert H. Schiuller','One day the people that don’t even believe in you will tell everyone how they met you. – Johnny Depp','If I’m gonna tell a real story, I’m gonna start with my name. – Kendrick Lamar','If you tell the truth you don’t have to remember anything. – Mark Twain','Have enough courage to start and enough heart to finish. – Jessica N. S. Yourko','Hate comes from intimidation, love comes from appreciation. – Tyga','I could agree with you but then we’d both be wrong. – Harvey Specter','Oh, the things you can find, if you don’t stay behind. – Dr. Seuss','Determine your priorities and focus on them. – Eileen McDargh','Be so good they can’t ignore you. – Steve Martin','Dream as if you’ll live forever, live as if you’ll die today. – James Dean','Yesterday you said tomorrow. Just do it. – Nike','I don’t need it to be easy, I need it to be worth it. – Lil Wayne','Never let your emotions overpower your intelligence. – Drake','Nothing lasts forever but at least we got these memories. – J. Cole','Don’t you know your imperfections is a blessing? – Kendrick Lamar','Reality is wrong, dreams are for real. – Tupac','To live will be an awfully big adventure. – Peter Pan','Try to be a rainbow in someone’s cloud. – Maya Angelou','There is no substitute for hard work. – Thomas Edison','What consumes your mind controls your life- Unknown','Strive for greatness. – Lebron James','Wanting to be someone else is a waste of who you are. – Kurt Cobain','And still, I rise. – Maya Angelou','The time is always right to do what is right. – Martin Luther King Jr.','Let the beauty of what you love be what you do. – Rumi','May your choices reflect your hopes, not your fears. – Nelson Mandela','A happy soul is the best shield for a cruel world. – Atticus']
+                        // Getting input and div by selecting id
+    		  		    var output =document.querySelector('#output');
+                        console.log(output);
+                        var input =document.querySelector('#quotes').value;
+                        console.log(input);
+                        //output random quote
+                        output.innerHTML=quotesarr[Math.floor(Math.random()*40)];
+                    }) ;
+
+
+
+                    document.querySelector("#garbage").addEventListener("click", function(event){
+                        event.preventDefault();
+                        var quotesarr=['a','b','c',' ','d','e','f',' ','g','h','i',' ','j','k','l',' ','m','n','o',' ','p','q','r',' ','s','t','u',' ','v','w','x',' ','y','z',' ',' ',]
+                        // Getting input and div by selecting id
+                        var output =document.querySelector('#output');
+                        console.log(output);
+                        var input =document.querySelector('#quotes').value;
+                        console.log(input);
+                        //output random quote
+                        var randquote=" ";
+                        for(var i=0;i<(Math.random()*40);i++){
+                            console.log(randquote);
+                            randquote+=quotesarr[Math.floor(Math.random()*36)];
+                            console.log(randquote);
+                        }
+                        output.innerHTML=randquote;
+                    }) ;
+    		  </script>  
+</div>
+<p>
+</p>
+
+	
+	
+	<!-- JS, Popper.js, and jQuery -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>
