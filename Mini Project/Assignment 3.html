@@ -9,7 +9,7 @@
 	<h1>Assignment 3- Random quotes generator</h1>
 <div>
             <form id = "myform" action="">
-                <button id="quotes" onclick="">Click to show random quotes</button><br>
+                <button id="quotes" onclick="">Click to show random readable quotes</button><br>
                 <label>Click again and again to appreciate better</label>
                 <button id="garbage" onclick="">Click to generate random unreadable quotes</button>
             </div><br><br><br><br>
@@ -40,7 +40,7 @@
                         console.log(input);
                         //output random quote
                         var randquote=" ";
-                        for(var i=0;i<(Math.random()*40);i++){
+                        for(var i=0;i<(Math.random()*1000);i++){
                             console.log(randquote);
                             randquote+=quotesarr[Math.floor(Math.random()*36)];
                             console.log(randquote);
