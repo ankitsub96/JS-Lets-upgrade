@@ -160,7 +160,7 @@
 							var userid=JSON.stringify(arr[j]).userId;
 							$('#substring'+j).text(userid);
 							$('.substring'+j+' .card-text').text("Message: "+JSON.stringify(arr[j].title));
-							$('.substring'+j+' .card-footer').text("Status: "+JSON.stringify(arr[j].completed));
+							$('.substring'+j+' .card-footer').html("Completion Status: <b>"+JSON.stringify(arr[j].completed)+"</b>");
 							
 						}
 					})
