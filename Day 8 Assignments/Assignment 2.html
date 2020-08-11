@@ -9,15 +9,14 @@
 </head>
 <body>
 	<h1>Multiplication Table of Input</h1>
-<div>
+<div style="padding-left: 10%;">
 <button class="mt-auto btn-success" onclick="start()">Click to get Started</button>
     		        		  <script type="text/javascript">
     		  		var tag =document.querySelector('div')
     		  	function start(){	
                     var n =Number(window.prompt('Kindly enter a positive number'));
-                    input="Input is -"+n+"  <br>";
+                    input="Input is :  "+n+"  <br>";
                     tag.innerHTML=input;
-                    tag.innerHTML+=input;
                     var tabletag=document.querySelector('p');
                     for(var i=0;i<10;i++){
                     	var val=n*(i+1);
@@ -27,7 +26,7 @@
                     };
     		  </script>
 </div>
-<p>
+<p style="padding-left: 10%;">
 </p>
 
 	

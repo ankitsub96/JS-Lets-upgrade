@@ -1,52 +1,174 @@
-
-
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="refresh" content="10"/>
+	<meta http-equiv="refresh" content="20"/>
 	<title>Assignment 3- Async Await and Fetch API</title>
 	<!-- CSS only -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 	
 </head>
 <body>
-	<h1>Async Await and Fetch API</h1>
+	<h1 style="text-align: center;">Async Await and Fetch API</h1>
 	<div class="container-fluid">
-  		<div class="row bg-light">
-  			<div id = "substring" class="col border">Kindly open the console
+		<div id = "substring" class="col border" style="text-align: center;">Displayed below is a random number(between 1-10) of users' data, where the users are also random.<br>
+			Kindly open the link below to see the data contained in the API<br>
+			<a href="https://jsonplaceholder.typicode.com/todos" target="_blank">Rest API</a><br>
+			<b id='stop_watch' class='text-muted' onload="stopwatch()" style="line-height: 1rem;">reloading in:</b>
+		</div>
+		<div class="row bg-light" style="height:300px; padding-left: 5%">
+			<div class="card substring0" style="width: 19%;">
+				<div class="card-body">
+					<h5 class="card-title"></h5>
+					<p class="card-text">
+						<br><i id="substring0"></i>
+					</p>
+				</div>
+				<div class="card-footer">
+					
+				</div>
+			</div>
 
-    		</div>
-              <script type="text/javascript">
-                var for1=Math.ceil(Math.random()*10);
-                console.log('Number of entries to be loaded (random number) is  '+ for1);
-    		  	    async function start(){
-                        var id=Math.ceil(Math.random()*200);
-                        console.log('Random Ids to be loaded is  '+ id);
-                    let response = await fetch(`https://jsonplaceholder.typicode.com/todos/${id}`);
-                    let data = await response.json()
-                    return data;
-                    }
-                for(var i=0;i<for1;i++){
-                    start()
-                    .then(data => console.log(data)); }
-                    // const obj=[];
-                    // var a=Math.ceil(Math.random()*200);
-                    
-                    // const fetchPromise =await fetch('https://jsonplaceholder.typicode.com/todos/')
-                    // .then(response => response.json())
-                    // .then(json =>{ obj.push(json);
-                    // console.log(json)
-                    // });
-                    // let result =await fetchPromise.then(Object.values(fetchPromise).forEach(json =>{if(json.id==a)console.log(json)}));
+			<div class="card substring1" style="width: 19%;">
+				<div class="card-body">
+					<h5 class="card-title"></h5>
+					<p class="card-text">
+						<br><i id="substring1"></i>
+					</p>
+				</div>
+				<div class="card-footer">
+					
+				</div>
+			</div>
+			<div class="card substring2" style="width: 19%;">
+				<div class="card-body">
+					<h5 class="card-title"></h5>
+					<p class="card-text">
+						<br><i id="substring2"></i>
+					</p>
+				</div>
+				<div class="card-footer">
+					
+				</div>
+			</div>
+			<div class="card substring3" style="width: 19%;">
+				<div class="card-body">
+					<h5 class="card-title"></h5>
+					<p class="card-text">
+						<br><i id="substring3"></i>
+					</p>
+				</div>
+				<div class="card-footer">
+					
+				</div>
+			</div>
+			<div class="card substring4" style="width: 19%;">
+				<div class="card-body">
+					<h5 class="card-title"></h5>
+					<p class="card-text">
+						<br><i id="substring4"></i>
+					</p>
+				</div>
+				<div class="card-footer">
+					
+				</div>
+			</div>
+		</div>
+		<div class="row bg-light" style="height:300px; padding-left: 5%">
 
-                    // console.log(a);
-                    
+			<div class="card substring5" style="width: 19%;">
+				<div class="card-body">
+					<h5 class="card-title"></h5>
+					<p class="card-text">
+						<br><i id="substring5"></i>
+					</p>
+				</div>
+				<div class="card-footer">
+					
+				</div>
+			</div>
+			<div class="card substring6" style="width: 19%;">
+				<div class="card-body">
+					<h5 class="card-title"></h5>
+					<p class="card-text">
+						<br><i id="substring6"></i>
+					</p>
+				</div>
+				<div class="card-footer">
+				</div>
+			</div>
+			<div class="card substring7" style="width: 19%;">
+				<div class="card-body">
+					<h5 class="card-title"></h5>
+					<p class="card-text">
+						<br><i id="substring7"></i>
+					</p>
+				</div>
+				<div class="card-footer">
+				</div>
+			</div>
+			<div class="card substring8" style="width: 19%;">
+				<div class="card-body">
+					<h5 class="card-title"></h5>
+					<p class="card-text">
+						<br><i id="substring8"></i>
+					</p>
+				</div>
+				<div class="card-footer">
+				</div>
+			</div>
+			<div class="card substring9" style="width: 19%;">
+				<div class="card-body">
+					<h5 class="card-title"></h5>
+					<p class="card-text">
+						<br><i id="substring9"></i>
+					</p>
+				</div>
+				<div class="card-footer"> 
+				</div>
+			</div>
 
-                
-    		  </script>
-    		</div>
-    		</div>
-	
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+			<script type="text/javascript">
+				window.onload=function stopwatch(){
+					var sec=20;
+					setInterval(function(){
+						$('#stop_watch').text('reloading in: '+sec+' seconds');
+						sec = sec-1;
+						console.log($('#stop_watch'));
+					}, 1000);
+				}
+
+				var for1=Math.ceil(Math.random()*10);
+				var arr=[];
+				console.log('Number of entries to be loaded (random number) is  '+ for1);
+				async function start(){
+					var id=Math.ceil(Math.random()*200);
+					console.log('Random Ids to be loaded is  '+ id);
+					let response = await fetch(`https://jsonplaceholder.typicode.com/todos/${id}`);
+					let data = await response.json();
+					return await data;
+				}
+				for(var i=0;i<for1;i++){
+					start()
+					.then(data => {
+						arr.push(data);
+						console.log(arr);
+					})
+					.then(()=>{
+						for (var j=0;j<(arr.length+1);j++){
+							$('.substring'+j+'  .card-title').text("ID: "+JSON.stringify(arr[j].id));
+							var userid=JSON.stringify(arr[j]).userId;
+							$('#substring'+j).text(userid);
+							$('.substring'+j+' .card-text').text("Message: "+JSON.stringify(arr[j].title));
+							$('.substring'+j+' .card-footer').text("Status: "+JSON.stringify(arr[j].completed));
+							
+						}
+					})
+				}
+			</script>
+		</div>
+	</div>
+
 	<!-- JS, Popper.js, and jQuery -->
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

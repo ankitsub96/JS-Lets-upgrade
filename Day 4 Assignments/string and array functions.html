@@ -28,26 +28,32 @@
     		  <script type="text/javascript">
     		  	function substring(){	
                     var a ='abcdefghi';
-                    document.write("String a is  "+a);
-    		  		document.write('substring of a between position 2 and 6 is '+a.substring(2,6));
+                    var op=document.querySelector("#output");
+                    op.innerHTML="";
+                    op.innerHTML+="String a is  "+a;
+    		  		op.innerHTML+='<br>substring of a between position 2 and 6 is '+a.substring(2,6);
                     };
                 function splice(){   
                     var a =['abc','def','ghi'];
-                    console.log("Array a is  "+a);
+                    var op=document.querySelector("#output");
+                    op.innerHTML="";
+                    op.innerHTML+="Array a is  ["+a+"]";
                     a.splice(2,0,'pqr','xyz');
-                    console.log('Splicing elements pqr and xyz at position 2: ' +a);
+                    op.innerHTML+='<br>Splicing elements pqr and xyz at position 2: [' +a+']';
                     };
                 function replace(){   
                     var a ='abc def ghi';
-                    console.log("String a is  "+a);
-                    console.log('replacing element def with pqr :  '+a.replace('def','pqr'));
+                    var op=document.querySelector("#output");
+                    op.innerHTML="";
+                    op.innerHTML+='String a is  "'+a+'"';
+                    op.innerHTML+='<br>replacing element def with pqr : "'+a.replace('def','pqr')+'"';
                     };
     		  </script>
     		</div>
     		</div>
   		</div>
 	</div>
-	
+	<div id="output"></div>
 	
 	<!-- JS, Popper.js, and jQuery -->
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
